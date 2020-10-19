@@ -4,7 +4,8 @@ import './home.scss';
 
 import Header from '../../components/header/header';
 import RadioButton from '../../components/radioButton/radioButton';
-import ButtonPrimaryLarge from '../../components/buttons/primaryLarge/primaryLarge'
+import ButtonPrimaryLarge from '../../components/buttons/primaryLarge/primaryLarge';
+import ProjectCard from '../../components/projectCard/projectCard';
 
 import allNeeds from '../../images/allNeeds.png';
 import programming from '../../images/programming.png';
@@ -31,6 +32,12 @@ export default function Home() {
               <h1><span>280 project ideas</span> to you be a co-founder:</h1>
               <ButtonPrimaryLarge btnLabel="Find your co-founder"/>
             </div>
+            <div className="homeContent__projectList">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div> 
           </section>
         </div>
       </section>
