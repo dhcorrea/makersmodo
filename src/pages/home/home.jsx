@@ -3,15 +3,10 @@ import React from 'react';
 import './home.scss';
 
 import Header from '../../components/header/header';
-import RadioButton from '../../components/radioButton/radioButton';
+import FilterList from '../../components/filterList/filterList';
 import ButtonPrimaryLarge from '../../components/buttons/primaryLarge/primaryLarge';
 import ProjectCard from '../../components/projectCard/projectCard';
-
-import allNeeds from '../../images/allNeeds.png';
-import programming from '../../images/programming.png';
-import design from '../../images/design.png';
-import marketing from '../../images/marketing.png';
-import business from '../../images/business.png';
+import Footer from '../../components/footer/footer';
 
 export default function Home() {
   return(
@@ -20,13 +15,8 @@ export default function Home() {
       <section className="homeContent">
         <div className="homeContent__wrap">
           <aside className="homeContent__filter">
-            <RadioButton itemLabel="All needs" itemIcon={allNeeds} itemValue="allNeeds"/>
-            <RadioButton itemLabel="Programming" itemIcon={programming} itemValue="programming"/>
-            <RadioButton itemLabel="Design" itemIcon={design} itemValue="design"/>
-            <RadioButton itemLabel="Marketing" itemIcon={marketing} itemValue="marketing"/>
-            <RadioButton itemLabel="Business" itemIcon={business} itemValue="business"/>
+            <FilterList/>
           </aside>
-
           <section className="homeContent__list">
             <div className="homeContent__listHeader">
               <h1><span>280 project ideas</span> to you be a co-founder:</h1>
@@ -41,6 +31,7 @@ export default function Home() {
           </section>
         </div>
       </section>
+      <Footer />
     </React.Fragment>
   )
 }
