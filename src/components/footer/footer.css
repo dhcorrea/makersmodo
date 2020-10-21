@@ -1,0 +1,29 @@
+.footer{
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid #EAEAEE;
+  display: flex;
+  justify-content: center;
+}
+
+.footerContent{
+  width: 65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerLogo{
+  height: 18px;
+}
+
+.footerSocial img{
+  background-color: #F0E7FF;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.footerSocial a:not(:last-child){
+  margin-right: 8px;
+}

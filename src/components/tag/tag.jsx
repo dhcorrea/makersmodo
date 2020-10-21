@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './tag.scss';
+import './tag.css';
 
 export default function Tag(props){
   return(

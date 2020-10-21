@@ -1,24 +1,18 @@
-.buttonPrimaryLarge{
+.buttonLarge{
   display: inline-block;
   padding: 16px 24px;
-
   background: linear-gradient(182.86deg, #7529F0 2.37%, #500DBE 97.62%);
-
   border: none;
   border-radius: 8px;
-  
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-
   cursor: pointer;
-
   outline: none;
-
   transition: .4s;
+}
 
-  &:hover{
-    box-shadow: 0px 16px 24px -8px rgba(81, 0, 214, 0.26);
-    transform: translateY(-3px);
-  }
+.buttonLarge:hover{
+  box-shadow: 0px 16px 24px -8px rgba(81, 0, 214, 0.26);
+  transform: translateY(-3px);
 }

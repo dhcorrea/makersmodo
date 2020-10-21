@@ -1,15 +1,14 @@
 .link{
   display: flex;
   align-items: center;
-
   font-size: 1rem;
   font-weight: 500;
   color: #8337FF;
   text-decoration: none;
+}
 
-  &__icon{
-    padding-top: 3px;
-    margin-left: .3rem;
-    max-width: 16px;
-  }
+.linkIcon{
+  padding-top: 3px;
+  margin-left: .3rem;
+  max-width: 16px;
 }

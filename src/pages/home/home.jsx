@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './home.scss';
+import './home.css';
 
 import Header from '../../components/header/header';
 import FilterList from '../../components/filterList/filterList';
-import ButtonPrimaryLarge from '../../components/buttons/primaryLarge/primaryLarge';
+import ButtonLarge from '../../components/buttonLarge/buttonLarge';
 import ProjectCard from '../../components/projectCard/projectCard';
 import Footer from '../../components/footer/footer';
 
@@ -13,16 +13,16 @@ export default function Home() {
     <React.Fragment>
       <Header />
       <section className="homeContent">
-        <div className="homeContent__wrap">
-          <aside className="homeContent__filter">
+        <div className="homeContentWrap">
+          <aside className="homeContentFilter">
             <FilterList/>
           </aside>
-          <section className="homeContent__list">
-            <div className="homeContent__listHeader">
+          <section className="homeContentList">
+            <div className="homeContentListHeader">
               <h1><span>280 project ideas</span> to you be a co-founder:</h1>
-              <ButtonPrimaryLarge btnLabel="Find your co-founder"/>
+              <ButtonLarge btnLabel="Find your co-founder"/>
             </div>
-            <div className="homeContent__projectList">
+            <div className="homeContentProjectList">
               <ProjectCard />
               <ProjectCard />
               <ProjectCard />

@@ -1,0 +1,71 @@
+.projectCard{
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 2px solid #EAEAEE;
+  border-radius: 12px;
+  transition: .4s;
+}
+
+.projectCard:hover{
+  border-color: #050530;
+  cursor: pointer;
+}
+
+.projectCardUser{
+  display: flex;
+  align-items: center;
+}
+
+.projectCard img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.projectCard span{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #050530;
+  margin-left: 0.75rem;
+}
+
+.projectCard h3{
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #050530;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.projectCard p{
+  margin-top: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: #73738B;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.projectCardFooter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.projectCardTagsFilter{
+  display: flex;
+  align-items: center;
+}
+
+.projectCardTagsFilter > h6{
+  font-size: 1rem;
+  font-weight: 500;
+  color: #050530;
+  margin-right: .5rem;
+}

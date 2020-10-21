@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './foundations/globalStyles.scss';
+import './foundations/globalStyles.css';
 
 import Home from './pages/home/home';
 
