@@ -69,3 +69,33 @@
   color: #050530;
   margin-right: .5rem;
 }
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .projectCard h3{
+    -webkit-line-clamp: 2;
+  }
+
+  .projectCard p{
+    -webkit-line-clamp: 4;
+  }
+
+  .projectCardFooter{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectCardFooter:last-child{
+    align-items: flex-end;
+  }
+
+  .projectCardTagsFilter{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectCardTagContainer{
+    margin-top: .5rem;
+  }
+}

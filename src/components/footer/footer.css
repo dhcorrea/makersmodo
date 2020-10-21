@@ -27,3 +27,27 @@
 .footerSocial a:not(:last-child){
   margin-right: 8px;
 }
+
+/*DEVICE 1280PX*/
+@media (max-width: 1280px) 
+{
+  .footerContent{width: 61rem;}
+}
+
+/*DEVICE 1080PX*/
+@media (max-width: 1080px) 
+{
+  .footerContent{width: 50rem;}
+}
+
+/*DEVICE 768PX*/
+@media (max-width: 768px) 
+{
+  .footerContent{width: 88%}
+}
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  
+}

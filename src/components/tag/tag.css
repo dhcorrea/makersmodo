@@ -8,3 +8,11 @@
   background-color: #F5F5F7;
   border-radius: 12px;
 }
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .tag{
+    margin-bottom: .5rem;
+  }
+}

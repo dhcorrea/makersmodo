@@ -4,7 +4,7 @@ import './filterList.css';
 
 export default function FilterList(){
   return(
-    <React.Fragment>
+    <div className="radioWrapper">
       <label className="radioContainer">
         <input type="radio" name="radioOptions" value="allNeeds"/>
         <span className="iconFilter iconAllNeeds"></span>
@@ -34,6 +34,6 @@ export default function FilterList(){
         <span className="iconFilter iconBusiness"></span>
         <span className="filterLabel">Business</span>
       </label>
-    </React.Fragment>
+    </div>
   )
 }

@@ -45,3 +45,38 @@
 .headerParagraph span{
   font-weight: 600;
 }
+
+/*DEVICE 768PX*/
+@media (max-width: 768px) 
+{
+  .headerTitle{
+    width: 80%;
+    font-size: 3rem;
+  }
+
+  .headerParagraph{
+    width: 80%;
+  }
+}
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .header{
+    margin: .2rem .2rem 0 .2rem;
+    background: url('../../images/imgHeaderMobile.png') no-repeat;
+    background-size: cover;
+  }
+  .headerTitle{
+    width: 96%;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .headerParagraph{
+    width: 96%;
+    font-size: 1.2rem;
+  }
+}
+
