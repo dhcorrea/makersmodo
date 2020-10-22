@@ -6,7 +6,7 @@ export default function FilterList(){
   return(
     <div className="radioWrapper">
       <label className="radioContainer">
-        <input type="radio" name="radioOptions" value="allNeeds"/>
+        <input type="radio" name="radioOptions" value="allNeeds" defaultChecked/>
         <span className="iconFilter iconAllNeeds"></span>
         <span className="filterLabel">All needs</span>
       </label>
