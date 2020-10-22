@@ -2,12 +2,12 @@ import React from 'react';
 
 import './foundations/globalStyles.css';
 
-import Home from './pages/home/home';
+import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Routes />
     </div>
   );
 }
