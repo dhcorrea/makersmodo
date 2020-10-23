@@ -1,0 +1,15 @@
+.linkContainer{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.linkContainer img{
+  margin-right: .5rem;
+}
+
+.linkContainer span{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #070742;
+}

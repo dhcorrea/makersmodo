@@ -1,0 +1,82 @@
+.hero{
+  margin: 1rem 1rem 0 1rem;
+  background: url('../../images/imgHeader.png') no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.heroLogo{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heroContent{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroTitle{
+    width: 45rem;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: -1px;
+    line-height: 110%;
+  }
+
+.heroTitle span{
+    color: #00FF66;
+}
+
+.heroParagraph{
+  width: 39.375rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 150%;
+  color: #fff;
+}
+
+.heroParagraph span{
+  font-weight: 600;
+}
+
+/*DEVICE 768PX*/
+@media (max-width: 768px) 
+{
+  .heroTitle{
+    width: 80%;
+    font-size: 3rem;
+  }
+
+  .heroParagraph{
+    width: 80%;
+  }
+}
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .hero{
+    margin: .2rem .2rem 0 .2rem;
+    background: url('../../images/imgHeaderMobile.png') no-repeat;
+    background-size: cover;
+  }
+  .heroTitle{
+    width: 96%;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .heroParagraph{
+    width: 96%;
+    font-size: 1.2rem;
+  }
+}
+

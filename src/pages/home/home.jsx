@@ -2,7 +2,7 @@ import React from 'react';
 
 import './home.css';
 
-import Header from '../../components/header/header';
+import Hero from '../../components/hero/hero';
 import FilterList from '../../components/filterList/filterList';
 import ButtonLarge from '../../components/buttonLarge/buttonLarge';
 import ProjectCard from '../../components/projectCard/projectCard';
@@ -11,7 +11,7 @@ import Footer from '../../components/footer/footer';
 export default function Home() {
   return(
     <React.Fragment>
-      <Header />
+      <Hero />
       <section className="homeContent">
         <div className="homeContentWrap">
           <aside className="homeContentFilter">

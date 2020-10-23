@@ -1,82 +1,30 @@
-.header{
-  margin: 1rem 1rem 0 1rem;
-  background: url('../../images/imgHeader.png') no-repeat;
-  background-size: cover;
+.headerContainer{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  }
+  padding: 1.5rem 3.5rem;
+  border-bottom: 1px solid #EAEAEE;
+  position: relative;
+}
 
 .headerLogo{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.headerContent{
-  text-align: center;
+.linkContainer{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  text-decoration: none;
 }
 
-.headerTitle{
-    width: 45rem;
-    font-size: 3.5rem;
-    font-weight: 400;
-    color: #fff;
-    letter-spacing: -1px;
-    line-height: 110%;
-  }
-
-.headerTitle span{
-    color: #00FF66;
+.linkContainer img{
+  margin-right: .5rem;
 }
 
-.headerParagraph{
-  width: 39.375rem;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 150%;
-  color: #fff;
-}
-
-.headerParagraph span{
+.linkContainer span{
+  font-size: 1rem;
   font-weight: 600;
+  color: #070742;
 }
-
-/*DEVICE 768PX*/
-@media (max-width: 768px) 
-{
-  .headerTitle{
-    width: 80%;
-    font-size: 3rem;
-  }
-
-  .headerParagraph{
-    width: 80%;
-  }
-}
-
-/*DEVICE 480PX*/
-@media (max-width: 480px) 
-{
-  .header{
-    margin: .2rem .2rem 0 .2rem;
-    background: url('../../images/imgHeaderMobile.png') no-repeat;
-    background-size: cover;
-  }
-  .headerTitle{
-    width: 96%;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 120%;
-  }
-
-  .headerParagraph{
-    width: 96%;
-    font-size: 1.2rem;
-  }
-}
-

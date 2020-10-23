@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import './header.css'
-import Logo from '../../images/logoWhite.svg';
+import './header.css';
 
-export default function Header() {
+import logo from '../../images/logoBlack.svg';
+import iconBack from '../../images/iconArrowLeft.svg';
+
+export default function Header(){
   return(
-    <section className="header">
-      <img src={Logo} alt="Makersmodo" className="headerLogo"/>
-      <div className="headerContent">
-        <h1 className="headerTitle">
-          Post. Find your <span>co-founder.</span> Build your dream business.
-        </h1>
-        <p className="headerParagraph">
-          Do you have a great idea but need a <span>programmer</span>, <span>designer</span>, <span>marketing</span> or <span>business</span> person to get there? Post and meet all here.
-        </p>
-      </div>
-    </section>
+    <div className="headerContainer">
+      <Link to="/" className="linkContainer">
+        <img src={iconBack} alt="Back to the homepage" />
+        <span>Home</span>
+      </Link>
+      <Link to="/">
+        <img src={logo} alt="Makersmodo" className="headerLogo"/>
+      </Link>
+    </div>
   )
 }
