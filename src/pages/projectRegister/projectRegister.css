@@ -1,0 +1,44 @@
+/*ALL PAGE CONTENT*/
+.registerContainer{
+  display: flex;
+  justify-content: center;
+}
+/*END ALL CONTENT*/
+
+/*PROMOTIONAL PRICE BANNER*/
+.postValue{
+  width: 680px;
+  padding: 24px 0;
+  margin-top: 3.5rem;
+  text-align: center;
+  background: linear-gradient(91.55deg, #BD00FF -4.39%, #5E09E9 118.62%);
+  box-shadow: 0px 24px 32px -20px rgba(79, 0, 207, 0.24);
+  border-radius: 12px;
+}
+
+.postValue span{
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.textContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .2rem;
+}
+
+.textContainer p{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: .6;
+}
+
+.textContainer img{
+  width: 16px;
+  margin-left: .3rem;
+}
+/*END PROMOTIONAL PRICE BANNER*/
