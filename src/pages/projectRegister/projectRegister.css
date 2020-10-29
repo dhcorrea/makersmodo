@@ -1,7 +1,7 @@
 /*ALL PAGE CONTENT*/
 .registerContainer{
-  display: flex;
-  justify-content: center;
+  width: 680px;
+  margin: 0 auto;
 }
 /*END ALL CONTENT*/
 
@@ -38,7 +38,142 @@
 }
 
 .textContainer img{
-  width: 16px;
+  width: 18px;
   margin-left: .3rem;
 }
 /*END PROMOTIONAL PRICE BANNER*/
+
+
+/*FORM TITLE*/
+.formTitle{
+  display: flex;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+
+.formTitle h3{
+  color: #070742;
+  font-size: 1.25rem;
+  margin-right: .5rem;
+}
+
+.formTitle img{
+  width: 20px;
+  height: 20px;
+}
+/*END FORM TITLE*/
+
+
+/*FORM CONTENT*/
+.registerContainer form{
+  margin-top: 2rem;
+}
+
+.formUpload{
+  width: 100%;
+  height: 108px;
+  border: 1px solid #EAEAEE;
+  border-radius: .5rem;
+}
+
+.formMarginTop{
+  margin-top: 2.5rem ;
+}
+
+.formFirstLine{
+  display: flex;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.formTextField{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.formFirstName{
+  margin-right: 1.5rem;
+}
+
+.formTextField label{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 20px;
+  color: #070742;
+  margin-bottom: .5rem;
+}
+
+.formTextField input{
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #EAEAEE;
+  border-radius: 8px;
+  outline: none;
+  color: #070742;
+}
+
+.formTextField input::placeholder{
+  color: #B0B0C2;
+}
+
+.formTextField input:focus{
+  border: 1px solid #8337FF;
+  color: #070742;
+}
+
+/*CHECKBOXES*/
+.formCheckboxWrapper{
+  margin-top: 2.5rem;
+}
+
+.formCheckboxWrapper h3{
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 20px;
+  color: #070742;
+  margin-bottom: 1.2rem;
+}
+
+.checkboxContainer{
+  display: flex;
+}
+
+.checkboxItem{
+  list-style: none;
+  width: 100%;
+  
+}
+
+.checkboxItem label{
+  height: 64px;
+  border: 1px solid #E0E0E4;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #747495;
+}
+
+.checkboxItem:not(:last-child){
+  margin-right: 1rem;
+}
+
+.checkboxItem input{
+  display: none;
+}
+
+.checkboxContainer li input[type="checkbox"]:checked + label{
+  font-weight: 600;
+  color: #8337FF;
+  border: 2px solid #8337FF;
+}
+/*END CHECKBOX*/
+
+
+
+
+
