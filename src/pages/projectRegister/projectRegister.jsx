@@ -5,8 +5,8 @@ import './projectRegister.css';
 import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 
-import iconPromotionalValue from '../../images/iconPromotionalValue.png';
 import iconFire from '../../images/iconFire.png';
+import iconCheck from '../../images/iconCheck.svg';
 
 export default function ProjectRegister(){
   return(
@@ -18,7 +18,6 @@ export default function ProjectRegister(){
           <span>$ 29</span>
           <div className="textContainer">
             <p>Enjoy the <strong>promocional</strong> price</p>
-            {/* <img src={iconPromotionalValue} alt="Promotional value icon" /> */}
           </div>
         </div>
 
@@ -48,23 +47,26 @@ export default function ProjectRegister(){
 
           <div className="formCheckboxWrapper">
             <h3>Set the types of co-founders you need</h3>
-            
             <ul className="checkboxContainer">
               <li className="checkboxItem">
                 <input type="checkbox" id="programming" value="programming"/>
                 <label for="programming">Programming</label>
+                <img src={iconCheck} alt="Icon check" className="iconCheck"/>
               </li>
               <li className="checkboxItem">
                 <input type="checkbox" id="design" value="design"/>
                 <label for="design">Design</label>
+                <img src={iconCheck} alt="Icon check" className="iconCheck"/>
               </li>
               <li className="checkboxItem">
                 <input type="checkbox" id="marketing" value="marketing"/>
                 <label for="marketing">Marketing</label>
+                <img src={iconCheck} alt="Icon check" className="iconCheck"/>
               </li>
               <li className="checkboxItem">
                 <input type="checkbox" id="business" value="business"/>
                 <label for="business">Business</label>
+                <img src={iconCheck} alt="Icon check" className="iconCheck"/>
               </li>
             </ul>
           </div>

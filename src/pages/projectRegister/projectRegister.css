@@ -54,7 +54,7 @@
 .formTitle h3{
   color: #070742;
   font-size: 1.25rem;
-  margin-right: .5rem;
+  margin-right: .3rem;
 }
 
 .formTitle img{
@@ -142,7 +142,15 @@
 .checkboxItem{
   list-style: none;
   width: 100%;
-  
+  position: relative;
+}
+
+.iconCheck{
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  transform: scale(0);
+  transition: .2s;
 }
 
 .checkboxItem label{
@@ -170,6 +178,10 @@
   font-weight: 600;
   color: #8337FF;
   border: 2px solid #8337FF;
+}
+
+.checkboxContainer li input[type="checkbox"]:checked ~ img{
+  transform: scale(1);
 }
 /*END CHECKBOX*/
 
