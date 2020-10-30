@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './projectRegister.css';
 
@@ -70,6 +71,26 @@ export default function ProjectRegister(){
               </li>
             </ul>
           </div>
+
+          <div className="formTextArea">
+            <div className="labelContainer">
+              <label for="textarea" className="textAreaLabel">Tell a little bit about you</label>
+              <label for="textarea" className="textAreaSubLabel">Sell yourself. Your future co-founder want to know about you</label>
+            </div>
+            <textarea class="textArea" id="textarea" placeholder="Don't be shameful"></textarea>
+          </div>
+
+          <div className="formTextArea">
+            <div className="labelContainer">
+              <label for="textarea" className="textAreaLabel">Tell a little bit about your project</label>
+              <label for="textarea" className="textAreaSubLabel">Sell the idea for your future co-founder</label>
+            </div>
+            <textarea class="textArea" id="textarea" placeholder="Don't be shameful"></textarea>
+          </div>
+
+          <Link to="/project-register">
+            <button className="buttonForm">Find my co-founder</button>
+          </Link>
           
         </form>
       </div>
