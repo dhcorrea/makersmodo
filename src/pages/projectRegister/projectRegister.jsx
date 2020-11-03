@@ -8,6 +8,7 @@ import Footer from '../../components/footer/footer';
 
 import iconFire from '../../images/iconFire.png';
 import iconCheck from '../../images/iconCheck.svg';
+import iconAvatar from '../../images/iconAvatar.svg';
 
 export default function ProjectRegister(){
   return(
@@ -28,14 +29,18 @@ export default function ProjectRegister(){
         </div>
         
         <form>
-          <div className="formUpload"></div>
+          <label for="avatar" className="formUpload">
+            <img src={iconAvatar} alt="Avatar Icon" />
+            <input type="file" id="avatar" name="avatar" accept="image/*"/>
+            Upload your photo
+          </label>
 
           <div className="formFirstLine">
             <div className="formTextField">
               <label>Your first name</label>
               <input type="text" className="formFirstName" placeholder="Ex.: Steve"/>
             </div>
-            <div className="formTextField">
+            <div className="formTextField formTextFieldLasName">
               <label>Your last name</label>
               <input type="text" placeholder="Ex.: Jobs"/>
             </div>
@@ -77,7 +82,7 @@ export default function ProjectRegister(){
               <label for="textarea" className="textAreaLabel">Tell a little bit about you</label>
               <label for="textarea" className="textAreaSubLabel">Sell yourself. Your future co-founder want to know about you</label>
             </div>
-            <textarea class="textArea" id="textarea" placeholder="Don't be shameful"></textarea>
+            <textarea class="textArea" id="textarea" placeholder="Don't be shy"></textarea>
           </div>
 
           <div className="formTextArea">
@@ -85,7 +90,7 @@ export default function ProjectRegister(){
               <label for="textarea" className="textAreaLabel">Tell a little bit about your project</label>
               <label for="textarea" className="textAreaSubLabel">Sell the idea for your future co-founder</label>
             </div>
-            <textarea class="textArea" id="textarea" placeholder="Don't be shameful"></textarea>
+            <textarea class="textArea" id="textarea" placeholder="Don't be shy"></textarea>
           </div>
 
           <Link to="/project-register">

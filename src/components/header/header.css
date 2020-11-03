@@ -29,3 +29,19 @@
   color: #070742;
   opacity: .5;
 }
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .headerContainer{
+    justify-content: center;
+  }
+  
+  .linkContainer{
+    display: none;
+  }
+
+  .headerLogo{
+    position: relative;
+  }
+}

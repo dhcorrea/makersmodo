@@ -83,9 +83,30 @@
 /*UPLOAD*/
 .formUpload{
   width: 100%;
-  height: 108px;
-  border: 1px solid #EAEAEE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border: 1px dashed #DFDFE3;
   border-radius: .5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #8337FF;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.formUpload:hover{
+  border-color: #C3C3D2;
+}
+
+.formUpload input[type="file"]{
+  display: none;
+}
+
+.formUpload > img{
+  margin-bottom: .5rem;
 }
 /*END UPLOAD*/
 
@@ -287,6 +308,54 @@
 }
 /*END BUTTON FORM*/
 
+/*DEVICE 768PX*/
+@media (max-width: 768px) 
+{
+  .registerContainer{
+    width: 88%
+  }
+
+  .postValue{
+    width: 100%;
+  }
+
+  .formFirstLine{
+    flex-direction: column;
+  }
+
+  .formFirstName{
+    margin-right: 0;
+  }
+
+  .formTextFieldLasName{
+    margin-top: 2.5rem
+  }
+
+  .checkboxContainer{
+    flex-direction: column;
+  }
+
+  .checkboxItem:not(:last-child){
+    margin-bottom: .5rem;
+  }
+}
+
+/*DEVICE 480PX*/
+@media (max-width: 480px) 
+{
+  .postValue{
+    margin-top: 2rem;
+    background: linear-gradient(91.55deg, #BD00FF -4.39%, #5E09E9 118.62%);
+  }
+  
+  .formTitle{
+    margin-top: 2rem;
+  }
+
+  .formTitle > img{
+    display: none;
+  }
+}
 
 
 
