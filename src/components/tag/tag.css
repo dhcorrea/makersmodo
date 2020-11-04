@@ -9,6 +9,13 @@
   border-radius: 12px;
 }
 
+/*DEVICE 768PX*/
+@media (max-width: 768px) 
+{
+  .tag{
+    margin-bottom: .5rem;
+  }
+}
 /*DEVICE 480PX*/
 @media (max-width: 480px) 
 {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './header.css';
+import './headerClean.css';
 
 import logo from '../../images/logoBlack.svg';
 import iconBack from '../../images/iconArrowLeft.svg';
 
-export default function Header(){
+export default function HeaderClean(){
   return(
     <div className="headerContainer">
       <Link to="/" className="linkContainer">

@@ -1,14 +1,14 @@
 .headerContainer{
   display: flex;
   align-items: center;
-  padding: 1.5rem 3.5rem;
+  padding: 2rem 3.5rem;
   border-bottom: 1px solid #EAEAEE;
   position: relative;
 }
 
 .headerLogo{
   position: absolute;
-  top: 34%;
+  top: 37%;
   left: 50%;
   transform: translateX(-50%);
 }

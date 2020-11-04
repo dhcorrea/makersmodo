@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './projectRegister.css';
 
-import Header from '../../components/header/header';
+import HeaderClean from '../../components/headerClean/headerClean';
 import Footer from '../../components/footer/footer';
 
 import iconFire from '../../images/iconFire.png';
@@ -13,7 +13,7 @@ import iconAvatar from '../../images/iconAvatar.svg';
 export default function ProjectRegister(){
   return(
     <React.Fragment>
-      <Header />
+      <HeaderClean />
 
       <div className="registerContainer">
         <div className="postValue">

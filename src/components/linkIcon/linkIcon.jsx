@@ -6,9 +6,9 @@ import arrow from '../../images/arrowIcon.svg';
 
 export default function LinkIcon(props){
   return(
-    <a href="google.com" className="link">
-      {props.linkName}
+    <div className="link">
+      <span>{props.linkName}</span>
       <img src={arrow} alt="Details Icon" className="linkIcon"/>
-    </a>
+    </div>
   )
 }
