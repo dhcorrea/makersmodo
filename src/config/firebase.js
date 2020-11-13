@@ -1,15 +1,13 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDw4oZjhowoVvu61QV5g1LxOzfO9xXpfdQ",
-  authDomain: "makersmodo-beta.firebaseapp.com",
-  databaseURL: "https://makersmodo-beta.firebaseio.com",
-  projectId: "makersmodo-beta",
-  storageBucket: "makersmodo-beta.appspot.com",
-  messagingSenderId: "684728342226",
-  appId: "1:684728342226:web:88f5e7d8750a0486f67f0b",
-  measurementId: "G-PGLJQDTGSD"
+  apiKey: "AIzaSyDX7ALH1-kgEf6WkQOObwS33xLZBrGYZ4Q",
+  authDomain: "makersmodo.firebaseapp.com",
+  databaseURL: "https://makersmodo.firebaseio.com",
+  projectId: "makersmodo",
+  storageBucket: "makersmodo.appspot.com",
+  messagingSenderId: "184081733204",
+  appId: "1:184081733204:web:bfc3076a1e5e91b28d3fc1"
 };
 // Initialize Firebase
 export default firebase.initializeApp(firebaseConfig);
-firebase.analytics();

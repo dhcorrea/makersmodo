@@ -97,6 +97,21 @@
   transition: .2s;
 }
 
+.photoSentContainer{
+  display: flex;
+  align-items: center;
+
+}
+.photoSent{
+  color: #00945E;
+  margin-right: .3rem;
+}
+
+.inLoveIcon{
+  width: 18px;
+  height: 18px;
+}
+
 .formUpload:hover{
   border-color: #C3C3D2;
 }
@@ -285,8 +300,32 @@
 }
 /*END TEXT-AREA*/
 
+/*ERRO MESSAGE*/
+.msgErroContainer{
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #FFD6E4;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.msgErro{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FD0054;
+  margin-right: .5rem;
+}
+
+.msgErroIcon{
+  width: 18px;
+  height: 18px;
+}
+
 /*BUTTON FORM*/
-.buttonForm{
+.buttonFormPrimary{
   width: 100%;
   margin-top: 2.5rem;
   display: inline-block;
@@ -302,11 +341,28 @@
   transition: .4s;
 }
 
-.buttonForm:hover{
+.buttonFormPrimary:hover{
   box-shadow: 0px 16px 24px -8px rgba(81, 0, 214, 0.26);
   transform: translateY(-3px);
 }
+
+.buttonFormDisable{
+  width: 100%;
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding: 16px 24px;
+  background: #D2D2D2;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #848484;
+  cursor: progress;
+  outline: none;
+  text-align: center;
+}
 /*END BUTTON FORM*/
+
 
 /*DEVICE 768PX*/
 @media (max-width: 768px) 
