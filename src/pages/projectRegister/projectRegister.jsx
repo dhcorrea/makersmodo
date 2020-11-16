@@ -51,7 +51,7 @@ export default function ProjectRegister(){
         creation: new Date()
       }).then(() => {
         setEnviandoDados(0)
-        setMessage("sucesso")
+        alert("Data sent to the database")
       }).catch(erro => {
         setEnviandoDados(0)
         setMessage("erro")
@@ -89,7 +89,7 @@ export default function ProjectRegister(){
             {
               avatar ? 
                 <div className="photoSentContainer">
-                  <span className="photoSent">Photo sent</span>
+                  <span className="photoSent">Photo uploaded</span>
                   <img src={iconInLove} alt="Icon in love" className="inLoveIcon"/>
                 </div> :
                 <span>Upload your photo</span>
@@ -202,22 +202,6 @@ export default function ProjectRegister(){
               onChange={(e) => setAboutProject(e.target.value)}>
             </textarea>
           </div>
-
-          { 
-            message === "erro" &&
-            <div className="msgErroContainer">
-              <span className="msgErro">Sorry ma friend. Check all the fields and try again</span>
-              <img src={iconSad} className="msgErroIcon" alt="Bad" />
-            </div>
-          }
-
-          { 
-            message === "success" &&
-            <div className="msgErroContainer">
-              <span className="msgErro">Hell yeah! Project registered</span>
-              <img src={iconFire} className="msgErroIcon" alt="Bad" />
-            </div>
-          }
           
           {
             enviandoDados > 0 ?
@@ -229,6 +213,14 @@ export default function ProjectRegister(){
               className="buttonFormPrimary">
               Find my co-founder
             </button>
+          }
+
+          { 
+            message === "erro" &&
+            <div className="msgErroContainer">
+              <span className="msgErro">Sorry ma friend. Check all the fields and try again</span>
+              <img src={iconSad} className="msgErroIcon" alt="Bad" />
+            </div>
           }
           
         </form>
