@@ -5,8 +5,15 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: #5B5B78;
-  background-color: #F5F5F7;
   border-radius: 12px;
+}
+
+.tagBg{
+  background-color: #F5F5F7;
+}
+
+.tagNoBg{
+  background: none;
 }
 
 /*DEVICE 768PX*/

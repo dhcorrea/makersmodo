@@ -8,7 +8,7 @@ import firebase from "../../config/firebase";
 import Tag from '../../components/tag/tag';
 import LinkIcon from '../../components/linkIcon/linkIcon';
 
-export default function ProjectCard(id, avatar, firstName, lastName, aboutUser, aboutProject){
+export default function ProjectCard({id, avatar, firstName, lastName, aboutUser, aboutProject, needProgramming, needDesign, needMarketing, needBusiness}){
   const [urlImage, setUrlImage] = useState();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function ProjectCard(id, avatar, firstName, lastName, aboutUser, 
       <div className="projectCard">
         <div className="projectCardUser">
           <img src={urlImage} alt="user"/>
-          <span>{firstName} + {lastName}</span>
+          <span>{firstName} {lastName}</span>
         </div>
         <h3>{aboutUser}</h3>
         <p>{aboutProject}</p>
@@ -28,9 +28,10 @@ export default function ProjectCard(id, avatar, firstName, lastName, aboutUser, 
           <div className="projectCardTagsFilter">
             <h6>Laura's needs:</h6>
             <div className="projectCardTagContainer">
-              <Tag tagName="#Design"/>
-              <Tag tagName="#Programming"/>
-              <Tag tagName="#Marketing"/>
+              <Tag tagName={needProgramming}/>
+              <Tag tagName={needDesign}/>
+              <Tag tagName={needMarketing}/>
+              <Tag tagName={needBusiness}/>
             </div>
           </div>
           <LinkIcon linkName="Details"/>

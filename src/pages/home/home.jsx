@@ -12,6 +12,19 @@ import Footer from '../../components/footer/footer';
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
+  let projectList = [];
+
+  useEffect(() => {
+    firebase.firestore().collection("projetos").get().then(async(result) => {
+      await result.docs.forEach(doc => {
+        projectList.push({
+          id: doc.id,
+          ...doc.data()
+        })
+      })
+      setProjects(projectList);
+    })
+  });
 
   return(
     <React.Fragment>
@@ -24,16 +37,11 @@ export default function Home() {
           <section className="homeContentList">
             <div className="homeContentListHeader">
               <h1 className="homeContentListHeading">
-                <span>280 project ideas</span> to you be a co-founder:
-              </h1>
+                <span>+280 project ideas</span> to you be a co-founder:
+              </h1> 
               <ButtonLarge btnLabel="Find your co-founder"/>
             </div>
             <div className="homeContentProjectList">
-              {
-                firebase.firestore().collection("projetos").get().then(async(result) => {
-                  
-                })
-              }
               { projects.map(item => 
                   <ProjectCard 
                     key={item.id}
@@ -43,6 +51,10 @@ export default function Home() {
                     lastName={item.lastName}
                     aboutUser={item.aboutUser}
                     aboutProject={item.aboutProject}
+                    needProgramming={item.needProgramming}
+                    needDesign={item.needDesign}
+                    needMarketing={item.needMarketing}
+                    needBusiness={item.needBusiness}
                   />) 
               }
             </div> 

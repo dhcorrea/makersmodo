@@ -46,9 +46,7 @@ export default function ProjectRegister(){
         needBusiness:needBusiness,
         aboutUser:aboutUser,
         aboutProject:aboutProject,
-        avatar:avatar.name,
-        views:0,
-        creation: new Date()
+        avatar:avatar.name
       }).then(() => {
         setEnviandoDados(0)
         alert("Data sent to the database")
