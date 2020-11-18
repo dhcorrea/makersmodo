@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './projectCard.css';
 
-import photoUser from '../../images/userphoto.jpg';
+import firebase from "../../config/firebase";
 
 import Tag from '../../components/tag/tag';
 import LinkIcon from '../../components/linkIcon/linkIcon';
 
-export default function ProjectCard(){
+export default function ProjectCard(id, avatar, firstName, lastName, aboutUser, aboutProject){
+  const [urlImage, setUrlImage] = useState();
+
+  useEffect(() => {
+    firebase.storage().ref(`images/${avatar}`).getDownloadURL().then(url => setUrlImage(url))    
+  }, [urlImage])
+
   return(
-    <Link to="/project-details/">
+    <Link to={"/project-details/" + id}>
       <div className="projectCard">
         <div className="projectCardUser">
-          <img src={photoUser} alt="user"/>
-          <span>Laura Magalhães</span>
+          <img src={urlImage} alt="user"/>
+          <span>{firstName} + {lastName}</span>
         </div>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labour</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo exercitati</p>
+        <h3>{aboutUser}</h3>
+        <p>{aboutProject}</p>
         <div className="projectCardFooter">
           <div className="projectCardTagsFilter">
             <h6>Laura's needs:</h6>

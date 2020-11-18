@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './home.css';
+
+import firebase from "../../config/firebase"
 
 import Hero from '../../components/hero/hero';
 import FilterList from '../../components/filterList/filterList';
@@ -9,6 +11,8 @@ import ProjectCard from '../../components/projectCard/projectCard';
 import Footer from '../../components/footer/footer';
 
 export default function Home() {
+  const [projects, setProjects] = useState([]);
+
   return(
     <React.Fragment>
       <Hero />
@@ -25,11 +29,22 @@ export default function Home() {
               <ButtonLarge btnLabel="Find your co-founder"/>
             </div>
             <div className="homeContentProjectList">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {
+                firebase.firestore().collection("projetos").get().then(async(result) => {
+                  
+                })
+              }
+              { projects.map(item => 
+                  <ProjectCard 
+                    key={item.id}
+                    id={item.id}
+                    avatar={item.avatar}
+                    firstName={item.firstName}
+                    lastName={item.lastName}
+                    aboutUser={item.aboutUser}
+                    aboutProject={item.aboutProject}
+                  />) 
+              }
             </div> 
           </section>
         </div>
