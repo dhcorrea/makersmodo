@@ -42,6 +42,7 @@ export default function Home() {
               <ButtonLarge btnLabel="Find your co-founder"/>
             </div>
             <div className="homeContentProjectList">
+              <projectCard />
               { projects.map(item => 
                   <ProjectCard 
                     key={item.id}

@@ -20,10 +20,11 @@
   align-items: center;
 }
 
-.projectCard img{
-  width: 40px;
-  height: 40px;
+.projectCardUser > img{
+  width: 32px;
+  height: 32px;
   border-radius: 100%;
+  background-color: #F5F5F7;
 }
 
 .projectCard span{
@@ -31,6 +32,7 @@
   font-weight: 600;
   color: #050530;
   margin-left: 0.75rem;
+  /*object-fit*/
 }
 
 .projectCard h3{

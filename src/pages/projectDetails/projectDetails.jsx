@@ -27,7 +27,7 @@ export default function ProjectDetails(props){
 
       <div className="projectWrapper">
         <div className="titleContent">
-          <h1 className>{project.firstName}'s post details</h1>
+          <h1>Post details</h1>
           <img src={iconFire} alt="Fire icon" />
         </div>
         

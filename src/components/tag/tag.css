@@ -13,7 +13,7 @@
 }
 
 .tagNoBg{
-  background: none;
+  display: none;
 }
 
 /*DEVICE 768PX*/
