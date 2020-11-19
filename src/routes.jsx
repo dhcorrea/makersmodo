@@ -12,8 +12,8 @@ export default function Routes(){
       <ScrollIntoView>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/project-register" component={ProjectRegister} />
-          <Route path="/project-details" component={ProjectDetails} />
+          <Route path="/project-register" exact component={ProjectRegister} />
+          <Route path="/project-details/:id" component={ProjectDetails} />
         </Switch>
       </ScrollIntoView>
     </BrowserRouter>

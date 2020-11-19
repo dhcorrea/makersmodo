@@ -9,7 +9,7 @@ import Tag from '../../components/tag/tag';
 import LinkIcon from '../../components/linkIcon/linkIcon';
 
 export default function ProjectCard({id, avatar, firstName, lastName, aboutUser, aboutProject, needProgramming, needDesign, needMarketing, needBusiness}){
-  const [urlImage, setUrlImage] = useState();
+  const [urlImage, setUrlImage] = useState(); //null
 
   useEffect(() => {
     firebase.storage().ref(`images/${avatar}`).getDownloadURL().then(url => setUrlImage(url))    
@@ -26,7 +26,7 @@ export default function ProjectCard({id, avatar, firstName, lastName, aboutUser,
         <p>{aboutProject}</p>
         <div className="projectCardFooter">
           <div className="projectCardTagsFilter">
-            <h6>Laura's needs:</h6>
+            <h6>{firstName}'s needs:</h6>
             <div className="projectCardTagContainer">
               <Tag tagName={needProgramming}/>
               <Tag tagName={needDesign}/>

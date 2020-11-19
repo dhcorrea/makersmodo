@@ -1,54 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './projectDetails.css';
 
+import firebase from '../../config/firebase';
+
 import iconFire from '../../images/iconFire.png';
-import photoUser from '../../images/userphoto.jpg';
 
 import Tag from '../../components/tag/tag';
 import HeaderFull from '../../components/headerFull/headerFull';
 import Footer from '../../components/footer/footer';
 
-export default function projectDetails(){
+export default function ProjectDetails(props){
+  const [project, setProject] = useState({});
+  const [urlImage, setUrlImage] = useState({});
+
+  useEffect(() => {
+    firebase.firestore().collection('projetos').doc(props.match.params.id).get().then(result => {
+      setProject(result.data())
+      firebase.storage().ref(`images/${project.avatar}`).getDownloadURL().then(url => setUrlImage(url));
+    })
+  })
+
   return(
     <React.Fragment>
       <HeaderFull />
 
       <div className="projectWrapper">
         <div className="titleContent">
-          <h1 className>Laura's post details</h1>
+          <h1 className>{project.firstName}'s post details</h1>
           <img src={iconFire} alt="Fire icon" />
         </div>
         
         <div className="projectContent">
           <div className="userContainer">
-            <img src={photoUser} alt="User" className="userPhoto"/>
-            <span className="userName">Laura Magalhães</span>
+            <img src={urlImage} alt="User" className="userPhoto"/>
+            <span className="userName">{project.firstName} {project.lastName}</span>
           </div>
 
           <div className="userNeeds">
-            <span className="userNeedsLabel">Laura's needs:</span>
+            <span className="userNeedsLabel">{project.firstName}'s needs:</span>
             <div className="tagContainer">
-              <Tag tagName="#Design"/>
-              <Tag tagName="#Programming"/>
-              <Tag tagName="#Marketing"/>
-              <Tag tagName="#Business"/>
+              <Tag tagName={project.needProgramming}/>
+              <Tag tagName={project.needDesign}/>
+              <Tag tagName={project.needMarketing}/>
+              <Tag tagName={project.needBusiness}/>
             </div>
           </div>
 
           <div className="projectText">
             <h3 className="textTitle">About the project</h3>
-            <p className="textParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <p className="textParagraph">{project.aboutProject}</p>
           </div>
 
           <div className="projectText">
-            <h3 className="textTitle">About Laura</h3>
-            <p className="textParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+            <h3 className="textTitle">About {project.firstName}</h3>
+            <p className="textParagraph">{project.aboutUser}</p>
           </div>
 
           <div className="userContact">
-            <h3 className="textTitle">Are you interested? Contact Laura</h3>
-            <p className="userEmail">laura@gmail.com</p>
+            <h3 className="textTitle">Are you interested? Contact {project.firstName}</h3>
+            <p className="userEmail">{project.email}</p>
           </div>
         </div>
       </div>
