@@ -25,6 +25,7 @@
   height: 32px;
   border-radius: 100%;
   background-color: #F5F5F7;
+  object-fit: cover;
 }
 
 .projectCard span{
@@ -32,7 +33,6 @@
   font-weight: 600;
   color: #050530;
   margin-left: 0.75rem;
-  /*object-fit*/
 }
 
 .projectCard h3{

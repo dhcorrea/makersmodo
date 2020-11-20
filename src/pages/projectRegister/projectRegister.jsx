@@ -44,8 +44,8 @@ export default function ProjectRegister(){
         needDesign:needDesign,
         needMarketing:needMarketing,
         needBusiness:needBusiness,
-        aboutUser:aboutUser,
         aboutProject:aboutProject,
+        aboutUser:aboutUser,
         avatar:avatar.name
       }).then(() => {
         setEnviandoDados(0)
@@ -174,6 +174,20 @@ export default function ProjectRegister(){
 
           <div className="formTextArea">
             <div className="labelContainer">
+              <label htmlFor="textarea" className="textAreaLabel">Tell a little bit about your project</label>
+              <label htmlFor="textarea" className="textAreaSubLabel">Sell the idea for your future co-founder</label>
+            </div>
+            <textarea
+              className="textArea" 
+              id="textarea" 
+              placeholder="Don't be shy"
+              value={aboutProject}
+              onChange={(e) => setAboutProject(e.target.value)}>
+            </textarea>
+          </div>
+
+          <div className="formTextArea">
+            <div className="labelContainer">
               <label htmlFor="textarea" className="textAreaLabel">Tell a little bit about you</label>
               <label htmlFor="textarea" className="textAreaSubLabel">Sell yourself. Your future co-founder want to know about you</label>
             </div>
@@ -184,20 +198,6 @@ export default function ProjectRegister(){
               value={aboutUser}
               onChange={(e) => setAboutUser(e.target.value)}>
               
-            </textarea>
-          </div>
-
-          <div className="formTextArea">
-            <div className="labelContainer">
-              <label htmlFor="textarea" className="textAreaLabel">Tell a little bit about your project</label>
-              <label htmlFor="textarea" className="textAreaSubLabel">Sell the idea for your future co-founder</label>
-            </div>
-            <textarea
-              className="textArea" 
-              id="textarea" 
-              placeholder="Don't be shy"
-              value={aboutProject}
-              onChange={(e) => setAboutProject(e.target.value)}>
             </textarea>
           </div>
           

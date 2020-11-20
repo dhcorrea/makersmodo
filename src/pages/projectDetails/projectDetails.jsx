@@ -15,9 +15,9 @@ export default function ProjectDetails(props){
   const [urlImage, setUrlImage] = useState({});
 
   useEffect(() => {
-    firebase.firestore().collection('projetos').doc(props.match.params.id).get().then(result => {
+    firebase.firestore().collection("projetos").doc(props.match.params.id).get().then(result => {
       setProject(result.data())
-      firebase.storage().ref(`images/${project.avatar}`).getDownloadURL().then(url => setUrlImage(url));
+      firebase.storage().ref('images/' + project.avatar).getDownloadURL().then(url => setUrlImage(url));
     })
   })
 

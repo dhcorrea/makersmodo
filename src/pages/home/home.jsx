@@ -12,19 +12,25 @@ import Footer from '../../components/footer/footer';
 
 export default function Home() {
   const [projects, setProjects] = useState([]);
-  let projectList = [];
+  const ref = firebase.firestore().collection("projetos");
 
-  useEffect(() => {
-    firebase.firestore().collection("projetos").get().then(async(result) => {
-      await result.docs.forEach(doc => {
-        projectList.push({
+  function getProjects(){
+    ref.onSnapshot((querySnapshot) => {
+      const items = [];
+      querySnapshot.forEach((doc) => {
+        items.push({
           id: doc.id,
           ...doc.data()
         })
-      })
-      setProjects(projectList);
+      });
+      setProjects(items);
     })
-  });
+  }
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
 
   return(
     <React.Fragment>
@@ -42,22 +48,20 @@ export default function Home() {
               <ButtonLarge btnLabel="Find your co-founder"/>
             </div>
             <div className="homeContentProjectList">
-              <projectCard />
-              { projects.map(item => 
-                  <ProjectCard 
-                    key={item.id}
-                    id={item.id}
-                    avatar={item.avatar}
-                    firstName={item.firstName}
-                    lastName={item.lastName}
-                    aboutUser={item.aboutUser}
-                    aboutProject={item.aboutProject}
-                    needProgramming={item.needProgramming}
-                    needDesign={item.needDesign}
-                    needMarketing={item.needMarketing}
-                    needBusiness={item.needBusiness}
-                  />) 
-              }
+              { projects.map((item) => (
+                <ProjectCard 
+                  key={item.id}
+                  id={item.id}
+                  avatar={item.avatar}
+                  firstName={item.firstName}
+                  lastName={item.lastName}
+                  aboutUser={item.aboutUser}
+                  aboutProject={item.aboutProject}
+                  needProgramming={item.needProgramming}
+                  needDesign={item.needDesign}
+                  needMarketing={item.needMarketing}
+                  needBusiness={item.needBusiness}
+                />))}
             </div> 
           </section>
         </div>
