@@ -13,7 +13,7 @@ export default function ProjectCard({id, avatar, firstName, lastName, aboutUser,
 
   useEffect(() => {
     firebase.storage().ref(`images/${avatar}`).getDownloadURL().then(url => setUrlImage(url))    
-  }, [urlImage])
+  }/*, [urlImage]*/)
 
   return(
     <Link to={"/project-details/" + id}>

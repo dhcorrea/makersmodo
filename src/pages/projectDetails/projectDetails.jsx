@@ -17,7 +17,7 @@ export default function ProjectDetails(props){
   useEffect(() => {
     firebase.firestore().collection("projetos").doc(props.match.params.id).get().then(result => {
       setProject(result.data())
-      firebase.storage().ref('images/' + project.avatar).getDownloadURL().then(url => setUrlImage(url));
+      firebase.storage().ref(`images/${result.data().avatar}`).getDownloadURL().then(url => setUrlImage(url))
     })
   })
 
