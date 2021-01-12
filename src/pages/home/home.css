@@ -13,6 +13,7 @@
 }
 
 .homeContentFilter{
+  display: none;
   width: 20%;
   height: 25vh;
   top: 5%;
@@ -22,7 +23,8 @@
 }
 
 .homeContentList{
-  width: 80%;
+  width: 820px;
+  margin: 0 auto;
 }
 
 .homeContentList h1{
@@ -180,6 +182,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 2rem;
   }
 
   .homeContentListHeading{
